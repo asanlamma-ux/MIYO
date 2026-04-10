@@ -28,6 +28,10 @@ jobs:
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
+        with:
+          packages: ''
+          accept-android-sdk-licenses: false
+          log-accepted-android-sdk-licenses: false
 
       - name: Validate Gradle wrapper
         uses: gradle/actions/wrapper-validation@v3
