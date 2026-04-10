@@ -1,0 +1,78 @@
+{
+  "parameters": {
+    "text_panel": {
+      "size": ["95%", "25%"],
+      "color": "#efefff",
+      "color_text": "#000",
+      "indent_text": "8px",
+      "indent_bottom": "32px",
+      "size_text": "20px",
+      "style": "border-radius:16px;",
+      "dialog_speed": "10"
+    },
+    "name_panel": {
+      "size": ["222px", "48px"],
+      "position": ["0", "0", "-48px", "0"],
+      "size_text": "18px",
+      "color_text": "#000"
+    },
+    "title": "Tuesday Import Sample",
+    "launch_story": "block_1",
+    "key": {},
+    "languares": ["en"],
+    "buttons": [],
+    "autosave": true,
+    "font": "Arial",
+    "font_size": "18px",
+    "variables": {
+      "focus": 3,
+      "player_name": "Mina"
+    },
+    "sounds": {},
+    "characters": {},
+    "plugins": ["toast"]
+  },
+  "blocks": {
+    "block_1": ["241px", "471.5px", "block", false],
+    "block_2": ["709px", "313.5px", "block", false]
+  },
+  "block_1": [
+    {
+      "background_image": {
+        "en": "bg/station.png"
+      },
+      "dialogs": [
+        {
+          "name": "Guide",
+          "text": "Welcome back, <player_name>."
+        },
+        {
+          "text": "Choose your next move.",
+          "choice": [
+            {
+              "go_to": "block_2",
+              "text": "Step into the arcade",
+              "variables": [
+                ["focus", "+", 1]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "block_2": [
+    {
+      "background_image": {
+        "en": "bg/market.png"
+      },
+      "dialogs": [
+        {
+          "name": "Guide",
+          "text": "Your focus is now <focus>."
+        }
+      ],
+      "background_color": "#859a0b"
+    }
+  ]
+}
