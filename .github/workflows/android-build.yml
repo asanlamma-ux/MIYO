@@ -35,6 +35,18 @@ jobs:
       - name: Make Gradle executable
         run: chmod +x ./gradlew
 
+      - name: Accept SDK licenses
+        run: yes | sdkmanager --licenses > /dev/null
+
+      - name: Install Android packages
+        run: >
+          sdkmanager
+          "platform-tools"
+          "platforms;android-35"
+          "build-tools;35.0.0"
+          "cmake;3.22.1"
+          "ndk;27.0.12077973"
+
       - name: Build debug APK
         run: ./gradlew --stacktrace assembleDebug
 
@@ -44,4 +56,3 @@ jobs:
           name: miyo-debug-apk
           path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
-
