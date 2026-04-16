@@ -1,0 +1,86 @@
+{
+  "expo": {
+    "name": "Miyo",
+    "owner": "teddysugar_143",
+    "slug": "miyo-epub-reader",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "miyo",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Miyo needs access to your photos to set custom book covers.",
+        "UIBackgroundModes": []
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#f7ece6"
+      },
+      "permissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.WRITE_SETTINGS"
+      ],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [
+            { "mimeType": "application/epub+zip" },
+            { "pathPattern": ".*\\.epub$", "scheme": "file" },
+            { "pathPattern": ".*\\.epub$", "scheme": "content" }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ],
+      "package": "com.miyo.reader"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-dev-client",
+      "expo-brightness",
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#f7ece6"
+        }
+      ],
+      "expo-font",
+      "expo-web-browser",
+      [
+        "expo-document-picker",
+        {
+          "iCloudContainerEnvironment": "Production"
+        }
+      ],
+      "expo-secure-store"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "supabaseUrl": "https://fonhjguymlijbswhmedx.supabase.co",
+      "supabaseAnonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZvbmhqZ3V5bWxpamJzd2htZWR4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU2NDk0NjUsImV4cCI6MjA5MTIyNTQ2NX0.0aGHrFUbviQ3-hSZKK4kpnBSYXrFjFB7l76QE8FBHuc",
+      "googleDriveClientId": "374403735145-io0vigo7k890mkvqeeip9rkh3057qi8q.apps.googleusercontent.com",
+      "eas": {
+        "projectId": "bb9b0774-b8c7-4ebd-85d5-fd9ec86a1055"
+      }
+    }
+  }
+}

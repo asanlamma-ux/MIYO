@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirm Your Miyo Account</title>
+  </head>
+  <body style="margin:0;padding:0;background:#f7efe9;font-family:Georgia,'Times New Roman',serif;color:#352925;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#f7efe9;padding:28px 12px;">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:640px;background:#fffaf6;border:1px solid #ecdcd1;border-radius:30px;overflow:hidden;box-shadow:0 20px 54px rgba(66,42,33,0.12);">
+            <tr>
+              <td style="padding:0 28px;background:linear-gradient(180deg,#fff7f3 0%,#fffaf6 100%);">
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td style="padding-top:26px;" align="left">
+                      <div style="display:inline-block;padding:9px 14px;border-radius:999px;background:#fde7ea;border:1px solid #f3ccd6;color:#b25d74;font-size:12px;letter-spacing:1.25px;font-weight:700;text-transform:uppercase;">
+                        Miyo Account
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center" style="padding:18px 0 10px;">
+                      <div style="width:124px;height:124px;border-radius:62px;background:radial-gradient(circle at 35% 30%,#fff6f7 0%,#ffe8ee 58%,#f9d5dd 100%);border:1px solid #f0c9d3;position:relative;">
+                        <div style="position:absolute;top:16px;left:44px;width:30px;height:30px;border-radius:18px 18px 18px 6px;background:#f3b9c7;transform:rotate(-24deg);"></div>
+                        <div style="position:absolute;top:30px;left:23px;width:22px;height:22px;border-radius:14px 14px 14px 4px;background:#ed9eb2;transform:rotate(-16deg);"></div>
+                        <div style="position:absolute;top:30px;right:23px;width:22px;height:22px;border-radius:14px 14px 4px 14px;background:#ed9eb2;transform:rotate(18deg);"></div>
+                        <div style="position:absolute;top:50px;left:46px;width:18px;height:18px;border-radius:50%;background:#f7d96a;"></div>
+                        <div style="position:absolute;bottom:16px;left:34px;width:56px;height:10px;border-radius:999px;background:#d3b18a;opacity:0.45;"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding-bottom:16px;">
+                      <h1 style="margin:0 0 10px;font-size:34px;line-height:1.06;font-weight:700;color:#342822;text-align:left;">
+                        Confirm your email
+                      </h1>
+                      <p style="margin:0;font-size:17px;line-height:1.75;color:#66534e;">
+                        Welcome to Miyo. Confirm your email address to unlock syncing, downloadable dictionaries, translation tools, and your personalized reading setup.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:8px 28px 0;">
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#fff1f3;border:1px solid #f1d6dd;border-radius:22px;">
+                  <tr>
+                    <td style="padding:18px 20px;">
+                      <p style="margin:0 0 8px;font-size:12px;letter-spacing:1.15px;font-weight:700;text-transform:uppercase;color:#b25d74;">
+                        Account
+                      </p>
+                      <p style="margin:0;font-size:16px;line-height:1.75;color:#4e3d38;word-break:break-all;">
+                        {{ .Email }}
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:26px 28px 8px;">
+                <a
+                  href="{{ .RedirectTo }}auth/confirm?token_hash={{ .TokenHash }}&type=email"
+                  style="display:inline-block;background:#c86488;color:#ffffff;text-decoration:none;font-size:17px;font-weight:700;line-height:1;padding:18px 28px;border-radius:18px;box-shadow:0 12px 24px rgba(200,100,136,0.24);"
+                >
+                  Confirm Email
+                </a>
+                <p style="margin:16px 0 0;font-size:14px;line-height:1.75;color:#7c6a65;">
+                  This link returns directly to Miyo on your device so the app can finish verification.
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:8px 28px 0;">
+                <div style="height:1px;background:#efe2da;"></div>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:18px 28px 12px;">
+                <p style="margin:0 0 10px;font-size:14px;line-height:1.75;color:#7c6a65;">
+                  If the button does not open Miyo, copy and open this link:
+                </p>
+                <p style="margin:0;font-size:13px;line-height:1.9;word-break:break-all;color:#9a655e;">
+                  {{ .RedirectTo }}auth/confirm?token_hash={{ .TokenHash }}&type=email
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="padding:0 28px 28px;">
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#fff7f1;border:1px solid #efe2d3;border-radius:20px;">
+                  <tr>
+                    <td style="padding:16px 18px;">
+                      <p style="margin:0 0 8px;font-size:12px;letter-spacing:1.1px;font-weight:700;text-transform:uppercase;color:#9d7651;">
+                        Security Note
+                      </p>
+                      <p style="margin:0;font-size:13px;line-height:1.8;color:#7f6b63;">
+                        If you did not create a Miyo account, you can ignore this email. No changes will be made unless the confirmation link is opened.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
