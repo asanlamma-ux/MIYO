@@ -2938,12 +2938,12 @@ true;
         actions={[
           {
             label: 'Keep Reading',
-            style: 'secondary',
+            variant: 'secondary',
             onPress: () => setSleepTimerDialogVisible(false),
           },
           {
             label: 'Exit Book',
-            style: 'primary',
+            variant: 'primary',
             onPress: () => {
               setSleepTimerDialogVisible(false);
               void handleBackRef.current();

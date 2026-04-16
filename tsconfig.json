@@ -24,5 +24,5 @@
     "expo-env.d.ts",
     "nativewind-env.d.ts"
   ],
-  "extends": "expo/tsconfig.base.json"
+  "extends": "expo/tsconfig.base"
 }

@@ -7,7 +7,7 @@ import * as ExpoSplashScreen from 'expo-splash-screen';
 import { StatusBar, setStatusBarBackgroundColor } from 'expo-status-bar';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { ThemeProvider, useTheme } from '@/context/ThemeContext';
-import { LibraryProvider } from '@/context/LibraryContext';
+import { LibraryProvider, useLibrary } from '@/context/LibraryContext';
 import { AuthProvider } from '@/context/AuthContext';
 import { TermsProvider } from '@/context/TermsContext';
 import { SyncProvider } from '@/context/SyncContext';
@@ -19,6 +19,7 @@ import {
   markPermissionAsked,
   markPermissionGranted,
   requestStorageDirectory,
+  getStorageDirectory,
 } from '@/utils/permissions';
 import { importBookFromSource } from '@/utils/library-import';
 import { logger } from '@/utils/logger';
